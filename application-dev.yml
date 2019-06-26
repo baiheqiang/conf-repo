@@ -39,8 +39,8 @@ spring:
         login-username: root
         login-password: iflytek!1
   mail:
-    host: smtp.163.com
-    username: baiheqiang@163.com
+    host: smtp.126.com
+    username: baiheqiang@126.com
     password: baiheqiang831220
     port: 465
     protocol: smtp
