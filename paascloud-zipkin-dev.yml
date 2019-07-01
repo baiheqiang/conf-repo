@@ -14,8 +14,8 @@ zipkin:
     rabbitmq:
       addresses: paascloud-mq-rabbit:5672
 #      addresses: localhost:5672
-      username: guest
-      password: guest
+      username: admin
+      password: admin
       queue: zipkin
   storage:
     type: mysql
