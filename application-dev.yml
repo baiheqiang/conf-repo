@@ -16,8 +16,8 @@ spring:
     host: paascloud-mq-rabbit
 #    host: localhost
     port: 5672
-    username: guest
-    password: guest
+    username: admin
+    password: admin
   redis:
     host: paascloud-db-redis
     password: iflytek!1
