@@ -50,13 +50,12 @@ paascloud:
       enable: true
   zk:
     zkAddressList: paascloud-provider-zk:2181
-  security:
-    oauth2:
-      jwtSigningKey: paascloud
-      client:
-        id: ${security.oauth2.resource.id}
-        accessTokenUrl: ${security.oauth2.client.access-token-uri}
-        clientId: ${security.oauth2.client.clientId}
-        clientSecret: ${security.oauth2.client.clientSecret}
-        clientAuthenticationScheme: header
-        tokenStore: jwt
+  oauth2:
+    jwtSigningKey: paascloud
+    client:
+      id: ${security.oauth2.resource.id}
+      accessTokenUrl: ${security.oauth2.client.access-token-uri}
+      clientId: ${security.oauth2.client.clientId}
+      clientSecret: ${security.oauth2.client.clientSecret}
+      clientAuthenticationScheme: header
+      tokenStore: jwt
