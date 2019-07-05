@@ -53,9 +53,21 @@ zuul:
         ConnectTimeout: 10000
         ReadTimeout: 10000
     qce-route:
-      path: /omc/**
+      path: /qce/**
       sensitiveHeaders:
       service-id: paascloud-provider-qce
+      ribbon:
+        eager-load:
+          enabled: true
+        MaxAutoRetries: 1
+        MaxAutoRetriesNextServer: 2
+        OkToRetryOnAllOperations: false
+        ConnectTimeout: 10000
+        ReadTimeout: 10000
+    qci-route:
+      path: /qci/**
+      sensitiveHeaders:
+      service-id: paascloud-provider-qci
       ribbon:
         eager-load:
           enabled: true

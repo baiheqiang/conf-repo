@@ -50,9 +50,9 @@ paascloud:
       enable: false
       reliableMessageConsumer: false
       reliableMessageProducer: false
-      instanceName: paascloud-provider-omc
-      consumerGroup: CID_OMC
-      producerGroup: PID_OMC
+      instanceName: paascloud-provider-qce
+      consumerGroup: CID_QCE
+      producerGroup: PID_QCE
   token:
     interceptor:
       enable: true
