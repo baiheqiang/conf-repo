@@ -129,3 +129,13 @@ paascloud:
         clientSecret: paascloudClientSecret
         accessTokenValidateSeconds: 7200
         scope: "*"
+      clients[8]:
+        clientId: paascloud-client-qce
+        clientSecret: paascloudClientSecret
+        accessTokenValidateSeconds: 7200
+        scope: "*"
+      clients[9]:
+        clientId: paascloud-client-qci
+        clientSecret: paascloudClientSecret
+        accessTokenValidateSeconds: 7200
+        scope: "*"
