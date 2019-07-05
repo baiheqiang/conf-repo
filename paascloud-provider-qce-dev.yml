@@ -45,6 +45,14 @@ security:
 
 paascloud:
   enableSqlLogInterceptor: false
+  aliyun:
+    rocketMq:
+      enable: false
+      reliableMessageConsumer: false
+      reliableMessageProducer: false
+      instanceName: paascloud-provider-omc
+      consumerGroup: CID_OMC
+      producerGroup: PID_OMC
   token:
     interceptor:
       enable: true
