@@ -19,7 +19,7 @@ zuul:
       path: /uac/**
       sensitiveHeaders:
 #      strip-prefix: false
-      service-id: paascloud-provider-uac
+      service-id: iflymrqc-provider-uac
       ribbon:
         eager-load:
           enabled: true
@@ -31,7 +31,7 @@ zuul:
     mdc-route:
       path: /mdc/**
       sensitiveHeaders:
-      service-id: paascloud-provider-mdc
+      service-id: iflymrqc-provider-mdc
       ribbon:
         eager-load:
           enabled: true
@@ -43,7 +43,7 @@ zuul:
     omc-route:
       path: /omc/**
       sensitiveHeaders:
-      service-id: paascloud-provider-omc
+      service-id: iflymrqc-provider-omc
       ribbon:
         eager-load:
           enabled: true
@@ -55,7 +55,7 @@ zuul:
     qce-route:
       path: /qce/**
       sensitiveHeaders:
-      service-id: paascloud-provider-qce
+      service-id: iflymrqc-provider-qce
       ribbon:
         eager-load:
           enabled: true
@@ -67,7 +67,7 @@ zuul:
     qci-route:
       path: /qci/**
       sensitiveHeaders:
-      service-id: paascloud-provider-qci
+      service-id: iflymrqc-provider-qci
       ribbon:
         eager-load:
           enabled: true
@@ -79,7 +79,7 @@ zuul:
     opc-route:
       path: /opc/**
       sensitiveHeaders:
-      service-id: paascloud-provider-opc
+      service-id: iflymrqc-provider-opc
       ribbon:
         eager-load:
           enabled: true
@@ -91,7 +91,7 @@ zuul:
     mall-route:
       path: /mall/**
       sensitiveHeaders:
-      service-id: paascloud-web-mall
+      service-id: iflymrqc-web-mall
       ribbon:
         eager-load:
           enabled: true
@@ -103,7 +103,7 @@ zuul:
     tpc-route:
       path: /tpc/**
       sensitiveHeaders:
-      service-id: paascloud-provider-tpc
+      service-id: iflymrqc-provider-tpc
       ribbon:
         eager-load:
           enabled: true
@@ -118,15 +118,15 @@ zuul:
 security:
   oauth2:
     client:
-      clientId: paascloud-client-gateway
-      clientSecret: paascloudClientSecret
-      access-token-uri: http://paascloud-gateway:7979/uac/oauth/token
-      user-authorization-uri: http://paascloud-gateway:7979/uac/oauth/authorize
+      clientId: iflymrqc-client-gateway
+      clientSecret: iflymrqcClientSecret
+      access-token-uri: http://iflymrqc-gateway:7979/uac/oauth/token
+      user-authorization-uri: http://iflymrqc-gateway:7979/uac/oauth/authorize
     resource:
-      user-info-uri: http://paascloud-gateway:7979/uac/user
+      user-info-uri: http://iflymrqc-gateway:7979/uac/user
       prefer-token-info: false
       jwt:
-        key-uri: http://paascloud-provider-uac:8000/oauth/token_key
+        key-uri: http://iflymrqc-provider-uac:8000/oauth/token_key
 
 proxy:
   auth:
@@ -134,7 +134,7 @@ proxy:
       uac-route: oauth2
       mdc-route: oauth2
 
-paascloud:
+iflymrqc:
   enableSqlLogInterceptor: false
 # swagger butler配置
 swagger.butler:
@@ -142,6 +142,6 @@ swagger.butler:
   swagger-version: 1.0
   auto-generate-from-zuul-routes: true
 # 指定要生成的范围
-  generate-routes: omc-route,mdc-route,opc-route,tpc-route,uac-route
+  generate-routes: qce-route,omc-route,mdc-route,opc-route,tpc-route,uac-route
 # 忽略某些路由生成
 #  ignore-routes:
