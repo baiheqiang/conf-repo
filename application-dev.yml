@@ -114,7 +114,7 @@ iflymrqc:
     rocketMq:
       namesrvAddr: iflymrqc-mq-rocket:9876
     sms:
-      signName: 快乐学习网
+      signName: 智能病历质检
       regionId: cn-beijing
       endpoint:
       endpointName: cn-beijing
