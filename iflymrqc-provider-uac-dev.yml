@@ -130,12 +130,12 @@ iflymrqc:
         accessTokenValidateSeconds: 7200
         scope: "*"
       clients[8]:
-        clientId: iflymrqc-client-qce
+        clientId: iflymrqc-client-ope
         clientSecret: iflymrqcClientSecret
         accessTokenValidateSeconds: 7200
         scope: "*"
       clients[9]:
-        clientId: iflymrqc-client-qci
+        clientId: iflymrqc-client-ops
         clientSecret: iflymrqcClientSecret
         accessTokenValidateSeconds: 7200
         scope: "*"
