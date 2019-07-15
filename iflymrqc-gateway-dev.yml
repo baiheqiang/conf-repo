@@ -14,6 +14,8 @@ zuul:
     socket-timeout-millis: 60000
     connect-timeout-millis: 60000
   forceOriginalQueryStringEncoding: true
+#  ignoredServices: *
+#  strip-prefix: true
   routes:
     uac-route:
       path: /uac/**
@@ -40,8 +42,8 @@ zuul:
         OkToRetryOnAllOperations: false
         ConnectTimeout: 10000
         ReadTimeout: 10000
-    omc-route:
-      path: /omc/**
+    qcm-route:
+      path: /qcm/**
       sensitiveHeaders:
       service-id: iflymrqc-provider-omc
       ribbon:
@@ -52,10 +54,10 @@ zuul:
         OkToRetryOnAllOperations: false
         ConnectTimeout: 10000
         ReadTimeout: 10000
-    qce-route:
-      path: /qce/**
+    ope-route:
+      path: /ope/**
       sensitiveHeaders:
-      service-id: iflymrqc-provider-qce
+      service-id: iflymrqc-provider-ope
       ribbon:
         eager-load:
           enabled: true
@@ -64,8 +66,8 @@ zuul:
         OkToRetryOnAllOperations: false
         ConnectTimeout: 10000
         ReadTimeout: 10000
-    qci-route:
-      path: /qci/**
+    ops-route:
+      path: /ops/**
       sensitiveHeaders:
       service-id: iflymrqc-provider-qci
       ribbon:
@@ -80,18 +82,6 @@ zuul:
       path: /opc/**
       sensitiveHeaders:
       service-id: iflymrqc-provider-opc
-      ribbon:
-        eager-load:
-          enabled: true
-        MaxAutoRetries: 1
-        MaxAutoRetriesNextServer: 2
-        OkToRetryOnAllOperations: false
-        ConnectTimeout: 10000
-        ReadTimeout: 10000
-    mall-route:
-      path: /mall/**
-      sensitiveHeaders:
-      service-id: iflymrqc-web-mall
       ribbon:
         eager-load:
           enabled: true
@@ -142,6 +132,6 @@ swagger.butler:
   swagger-version: 1.0
   auto-generate-from-zuul-routes: true
 # 指定要生成的范围
-  generate-routes: qce-route,omc-route,mdc-route,opc-route,tpc-route,uac-route
+  generate-routes: ops-route,ope-route,qcm-route,mdc-route,opc-route,tpc-route,uac-route
 # 忽略某些路由生成
 #  ignore-routes:

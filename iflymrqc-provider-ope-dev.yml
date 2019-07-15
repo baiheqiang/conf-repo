@@ -33,7 +33,7 @@ pagehelper:
 security:
   oauth2:
     client:
-      clientId: iflymrqc-client-qce
+      clientId: iflymrqc-client-ope
       clientSecret: iflymrqcClientSecret
       access-token-uri: http://iflymrqc-gateway:7979/uac/oauth/token
       user-authorization-uri: http://iflymrqc-gateway:7979/uac/oauth/authorize
@@ -50,7 +50,7 @@ iflymrqc:
       enable: false
       reliableMessageConsumer: false
       reliableMessageProducer: false
-      instanceName: iflymrqc-provider-qce
+      instanceName: iflymrqc-provider-ope
       consumerGroup: CID_QCE
       producerGroup: PID_QCE
   token:

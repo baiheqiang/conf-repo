@@ -14,7 +14,6 @@ spring:
     auto: true
   rabbitmq:
     host: iflymrqc-mq-rabbit
-#    host: localhost
     port: 5672
     username: admin
     password: admin
@@ -129,7 +128,7 @@ iflymrqc:
       publicHost: 'your qiniu oss public host'
   alipay:
     callback:
-      url: http://dev-api.iflymrqc.net/omc/pay/alipayCallback
+      url: http://api.iflymrqc.net/omc/pay/alipayCallback
     qrCode:
       pcPath: /data/file/qrCode/alipay
       qiniuPath: alipay/QRCode/

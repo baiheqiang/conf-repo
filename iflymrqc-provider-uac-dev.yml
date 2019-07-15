@@ -52,9 +52,9 @@ iflymrqc:
       consumerGroup: CID_UAC
       producerGroup: PID_UAC
   auth:
-    rest-pwd-url: http://dev-login.iflymrqc.net/resetPwd?resetPwdKey=
-    active-user-url: http://dev-api.iflymrqc.net:7979/uac/auth/activeUser/
-    refresh-token-url: http://dev-api.iflymrqc.net:7979/uac/oauth/token
+    rest-pwd-url: http://login.iflymrqc.net/resetPwd?resetPwdKey=
+    active-user-url: http://api.iflymrqc.net:7979/uac/auth/activeUser/
+    refresh-token-url: http://api.iflymrqc.net:7979/uac/oauth/token
   token:
     interceptor:
       enable: true
@@ -115,17 +115,17 @@ iflymrqc:
         accessTokenValidateSeconds: 7200
         scope: "*"
       clients[5]:
-        clientId: iflymrqc-client-omc
-        clientSecret: iflymrqcClientSecret
-        accessTokenValidateSeconds: 7200
-        scope: "*"
-      clients[6]:
         clientId: iflymrqc-client-opc
         clientSecret: iflymrqcClientSecret
         accessTokenValidateSeconds: 7200
         scope: "*"
-      clients[7]:
+      clients[6]:
         clientId: iflymrqc-client-tpc
+        clientSecret: iflymrqcClientSecret
+        accessTokenValidateSeconds: 7200
+        scope: "*"
+      clients[7]:
+        clientId: iflymrqc-client-qcm
         clientSecret: iflymrqcClientSecret
         accessTokenValidateSeconds: 7200
         scope: "*"
