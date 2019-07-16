@@ -45,7 +45,7 @@ zuul:
     qcm-route:
       path: /qcm/**
       sensitiveHeaders:
-      service-id: iflymrqc-provider-omc
+      service-id: iflymrqc-provider-qcm
       ribbon:
         eager-load:
           enabled: true
@@ -69,7 +69,7 @@ zuul:
     ops-route:
       path: /ops/**
       sensitiveHeaders:
-      service-id: iflymrqc-provider-qci
+      service-id: iflymrqc-provider-ops
       ribbon:
         eager-load:
           enabled: true
