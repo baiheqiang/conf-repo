@@ -21,7 +21,6 @@ mybatis:
     call-setters-on-nulls: true
     default-statement-timeout: 25000
     map-underscore-to-camel-case: true
-    map-underscore-to-camel-case: true
 
 mybatis-plus:
   mapper-locations: classpath:mapper/**/*Mapper.xml
