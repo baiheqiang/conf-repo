@@ -14,10 +14,20 @@ liquibase:
   url: ${spring.datasource.url}
 
 mybatis:
-  type-aliases-package: com.iflymrqc.provider.model.domain
+  type-aliases-package: com.iflymrqc.provider.model.entity
   mapper-locations: classpath:mapper/*.xml,classpath*:sdk/mapper/*.xml
   configuration:
+    aggressive-lazy-loading: false
+    call-setters-on-nulls: true
+    default-statement-timeout: 25000
     map-underscore-to-camel-case: true
+    map-underscore-to-camel-case: true
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+  type-enums-package: net.mshome.twisted.tmall.enumeration
 
 mapper:
   mappers: com.iflymrqc.core.mybatis.MyMapper
