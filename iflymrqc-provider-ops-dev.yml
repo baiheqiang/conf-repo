@@ -44,7 +44,7 @@ security:
         key-uri: http://iflymrqc-provider-uac:8000/oauth/token_key
 
 iflymrqc:
-  resultPageUrl: http://127.0.0.1:8081/#/result
+  resultPageUrl: http://iflymrqc-browser:8081/#/result
   enableSqlLogInterceptor: false
   aliyun:
     rocketMq:
