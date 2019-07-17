@@ -7,28 +7,15 @@ spring:
   datasource:
     url: jdbc:mysql://iflymrqc-db-mysql:3306/iflymrqc?useUnicode=true&useSSL=false&characterEncoding=UTF-8
 
-liquibase:
-  change-log: classpath:liquibase/index.xml
-  user: ${spring.datasource.username}
-  password: ${spring.datasource.password}
-  url: ${spring.datasource.url}
-
 mybatis:
-  type-aliases-package: com.iflymrqc.provider.model.domain
-  mapper-locations: classpath:mapper/*.xml,classpath*:sdk/mapper/*.xml
+  mapper-locations: classpath:mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
 
-mapper:
-  mappers: com.iflymrqc.core.mybatis.MyMapper
-  not-empty: false
-  identity: MYSQL
-
-pagehelper:
-  helperDialect: mysql
-  reasonable: true
-  supportMethodsArguments: true
-  params: count=countSql
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
 
 security:
   oauth2:
@@ -46,19 +33,9 @@ security:
 iflymrqc:
   resultPageUrl: http://iflymrqc-browser:8081/#/result
   enableSqlLogInterceptor: false
-  aliyun:
-    rocketMq:
-      enable: false
-      reliableMessageConsumer: false
-      reliableMessageProducer: false
-      instanceName: iflymrqc-provider-ope
-      consumerGroup: CID_QCE
-      producerGroup: PID_QCE
   token:
     interceptor:
       enable: true
-  zk:
-    zkAddressList: iflymrqc-provider-zk:2181
   oauth2:
     jwtSigningKey: iflymrqc
     client:
